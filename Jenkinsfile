@@ -15,7 +15,7 @@ node{
                 sh 'mvn pmd:pmd'
             }
         }finally{
-            recordIssues(tools: [acuCobol(pattern: 'target/pmd.xml')])
+           recordIssues(tools: [pmdParser(pattern: 'target/pmd.xml')])
         }
     }
     
